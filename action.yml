@@ -47,6 +47,10 @@ inputs:
   apisec-project:
     description: 'The id of the project for security scan'
     required: true
+outputs:
+   random-number:
+     description: "Random number"
+     value: ${{ steps.apisec-scan-job }}    
 
 runs:
    using: "composite"
