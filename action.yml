@@ -47,6 +47,11 @@ inputs:
   apisec-project:
     description: 'The id of the project for security scan'
     required: true
+  who-to-greet:  # id of input
+    description: 'Welcome to hyderabad'
+    required: true
+     default: 'Welcome to Hyderabad World!!!!'
+
 outputs:
    random-number:
      description: "Random number"
