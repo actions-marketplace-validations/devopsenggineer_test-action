@@ -21,7 +21,7 @@
 
 
 
-name: 'Hello World7860'
+name: 'Hello World78601'
 description: 'Trigger APIsec scan'
 inputs:
   apisec-username:
