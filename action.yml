@@ -37,7 +37,7 @@
 
 
 
- name: 'Bot-Scanner'
+ name: 'Test-Scanner'
  description: 'Trigger APIsec scan'
  inputs:
    apisec-username:
