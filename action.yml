@@ -24,29 +24,29 @@
 name: 'Hello World78601'
 description: 'Trigger APIsec scan'
 inputs:
-  apisec-username:
-    description: 'The APIsec username with which the scans will be executed'
-    required: true
+#   apisec-username:
+#     description: 'The APIsec username with which the scans will be executed'
+#     required: true
 
-  apisec-password:
-    description: 'The Password of the APIsec user with which the scans will be executed'
-    required: true
+#   apisec-password:
+#     description: 'The Password of the APIsec user with which the scans will be executed'
+#     required: true
 
-  apisec-scan-job:  
-    description: 'The id of the scan job to run'
-    required: true
+#   apisec-scan-job:  
+#     description: 'The id of the scan job to run'
+#     required: true
 
-  apisec-region:  
-    description: 'The location the scan will be executed in'
-    required: true
-    default: 'SUPER_1'
-  apisec-environment:  
-    description: 'The id of the environment to run'
-    required: true
+#   apisec-region:  
+#     description: 'The location the scan will be executed in'
+#     required: true
+#     default: 'SUPER_1'
+#   apisec-environment:  
+#     description: 'The id of the environment to run'
+#     required: true
   
-  apisec-project:
-    description: 'The id of the project for security scan'
-    required: true
+#   apisec-project:
+#     description: 'The id of the project for security scan'
+#     required: true
   who-to-greet:  # id of input
     description: 'Welcome to hyderabad'
     required: true
@@ -55,7 +55,7 @@ inputs:
 outputs:
    random-number:
      description: "Random number"
-     value: ${{ steps.apisec-scan-job }}    
+     value: ${{ steps.who-to-greet }}    
 
 runs:
    using: "composite"
