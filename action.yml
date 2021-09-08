@@ -1,73 +1,73 @@
 
 
-name: 'Hello World78601-56'
- description: 'Trigger APIsec scan'
- inputs:
-   apisec-username:
-     description: 'The APIsec username with which the scans will be executed'
-     required: true
+# name: 'Hello World78601-56'
+#  description: 'Trigger APIsec scan'
+#  inputs:
+#    apisec-username:
+#      description: 'The APIsec username with which the scans will be executed'
+#      required: true
 
-   apisec-password:
-     description: 'The Password of the APIsec user with which the scans will be executed'
-     required: true
+#    apisec-password:
+#      description: 'The Password of the APIsec user with which the scans will be executed'
+#      required: true
 
-   apisec-scan-job:  
-     description: 'The id of the scan job to run'
-     required: true
+#    apisec-scan-job:  
+#      description: 'The id of the scan job to run'
+#      required: true
 
-   apisec-region:  
-     description: 'The location the scan will be executed in'
-     required: true
-     default: 'SUPER_1'
-   apisec-environment:  
-     description: 'The id of the environment to run'
-     required: true
+#    apisec-region:  
+#      description: 'The location the scan will be executed in'
+#      required: true
+#      default: 'SUPER_1'
+#    apisec-environment:  
+#      description: 'The id of the environment to run'
+#      required: true
   
-   apisec-project:
-     description: 'The id of the project for security scan'
-     required: true
+#    apisec-project:
+#      description: 'The id of the project for security scan'
+#      required: true
 
 
-runs:
-   using: "composite"
-   steps: 
-     - run: | 
-          wget https://raw.githubusercontent.com/intesar/FX-Scripts/master/fx_job_invoke_script.sh?token=AElo1orWSWln6w6y5uX0-1ylzPH8TX_3ks5bqJBywA%3D%3D -O fx_job_invoke_script.sh;bash fx_job_invoke_script.sh ${{inputs.apisec-username}} ${{ inputs.apisec-password }} ${{ inputs.apisec-project }} ${{ inputs.apisec-region }} ${{ inputs.apisec-environment }} ${{ inputs.apisec-scan-job }}
-       shell: bash
-
-# # name: 'Hello World78601'
-# name: 'Test-Pacbot-Scanner'
-# description: 'Trigger APIsec scan'
-# inputs:
-#   apisec-username:
-#     description: 'The APIsec username with which the scans will be executed'
-#     required: true
-
-#   apisec-password:
-#     description: 'The Password of the APIsec user with which the scans will be executed'
-#     required: true
-
-#   apisec-scan-job:  
-#     description: 'The id of the scan job to run'
-#     required: true
-
-#   apisec-region:  
-#     description: 'The location the scan will be executed in'
-#     required: true
-#     default: 'SUPER_1'
-#   apisec-environment:  
-#     description: 'The id of the environment to run'
-#     required: true
-  
-#   apisec-project:
-#     description: 'The id of the project for security scan'
-#     required: true
 # runs:
-#   using: "composite"
-#   steps:
-#     - run: | 
+#    using: "composite"
+#    steps: 
+#      - run: | 
 #           wget https://raw.githubusercontent.com/intesar/FX-Scripts/master/fx_job_invoke_script.sh?token=AElo1orWSWln6w6y5uX0-1ylzPH8TX_3ks5bqJBywA%3D%3D -O fx_job_invoke_script.sh;bash fx_job_invoke_script.sh ${{inputs.apisec-username}} ${{ inputs.apisec-password }} ${{ inputs.apisec-project }} ${{ inputs.apisec-region }} ${{ inputs.apisec-environment }} ${{ inputs.apisec-scan-job }}
-#       shell: bash
+#        shell: bash
+
+# name: 'Hello World78601'
+name: 'Test-Pacbot-Scanner'
+description: 'Trigger APIsec scan'
+inputs:
+  apisec-username:
+    description: 'The APIsec username with which the scans will be executed'
+    required: true
+
+  apisec-password:
+    description: 'The Password of the APIsec user with which the scans will be executed'
+    required: true
+
+  apisec-scan-job:  
+    description: 'The id of the scan job to run'
+    required: true
+
+  apisec-region:  
+    description: 'The location the scan will be executed in'
+    required: true
+    default: 'SUPER_1'
+  apisec-environment:  
+    description: 'The id of the environment to run'
+    required: true
+  
+  apisec-project:
+    description: 'The id of the project for security scan'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: | 
+          wget https://raw.githubusercontent.com/intesar/FX-Scripts/master/fx_job_invoke_script.sh?token=AElo1orWSWln6w6y5uX0-1ylzPH8TX_3ks5bqJBywA%3D%3D -O fx_job_invoke_script.sh;bash fx_job_invoke_script.sh ${{inputs.apisec-username}} ${{ inputs.apisec-password }} ${{ inputs.apisec-project }} ${{ inputs.apisec-region }} ${{ inputs.apisec-environment }} ${{ inputs.apisec-scan-job }}
+      shell: bash
 
 
 
