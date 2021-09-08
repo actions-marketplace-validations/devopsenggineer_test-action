@@ -1,29 +1,29 @@
-# name: 'Hello World7860'
-# description: 'Greet someone'
-# inputs:
-# #   GREET: 
-# #     description: 'Greeting from environment variables'
-# #     required: true
-#   who-to-greet:  # id of input
-#     description: 'Welcome to hyderabad'
-#     required: true
-#     default: 'Welcome to Hyderabad World!!!!'
-# outputs:
-#   random-number:
-#     description: "Random number"
-#     value: ${{ steps.random-number-generator.outputs.random-id }}
-# runs:
-#   using: "composite"
-#   steps:
-#     - run: echo Hello ${{ inputs.who-to-greet }}.
-#       shell: bash
-
-
-
-
-name: 'Hello World78601'
-description: 'Trigger APIsec scan'
+name: 'Hello World7860'
+description: 'Greet someone'
 inputs:
+#   GREET: 
+#     description: 'Greeting from environment variables'
+#     required: true
+  who-to-greet:  # id of input
+    description: 'Welcome to hyderabad'
+    required: true
+    default: 'Welcome to Hyderabad World!!!!'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.who-to-greet }}.
+      shell: bash
+
+
+
+
+# name: 'Hello World78601'
+# description: 'Trigger APIsec scan'
+# inputs:
 #   apisec-username:
 #     description: 'The APIsec username with which the scans will be executed'
 #     required: true
@@ -47,21 +47,21 @@ inputs:
 #   apisec-project:
 #     description: 'The id of the project for security scan'
 #     required: true
-  who-to-greet:  # id of input
-    description: 'Welcome to hyderabad'
-    required: true
-     default: 'Welcome to Hyderabad World!!!!'
+#   who-to-greet:  # id of input
+#     description: 'Welcome to hyderabad'
+#     required: true
+#      default: 'Welcome to Hyderabad World!!!!'
 
-outputs:
-   random-number:
-     description: "Random number"
-     value: ${{ steps.who-to-greet }}    
+# outputs:
+#    random-number:
+#      description: "Random number"
+#      value: ${{ steps.who-to-greet }}    
 
-runs:
-   using: "composite"
-  steps:
-     - run: echo Hello ${{ inputs.who-to-greet }}.
-       shell: bash
+# runs:
+#    using: "composite"
+#   steps:
+#      - run: echo Hello ${{ inputs.who-to-greet }}.
+#        shell: bash
   
 #     - run: | 
 #          wget https://raw.githubusercontent.com/intesar/FX-Scripts/master/fx_job_invoke_script.sh?token=AElo1orWSWln6w6y5uX0-1ylzPH8TX_3ks5bqJBywA%3D%3D -O fx_job_invoke_script.sh;bash fx_job_invoke_script.sh ${{inputs.apisec-username}} ${{ inputs.apisec-password }} ${{ inputs.apisec-project }} ${{ inputs.apisec-region }} ${{ inputs.apisec-environment }} ${{ inputs.apisec-scan-job }}
