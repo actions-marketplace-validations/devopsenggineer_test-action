@@ -1,6 +1,6 @@
 # name: 'Hello World78601'
-name: 'Hello-World78601'
-description: 'Greet someone'
+name: 'Test-Pacbot-Scanner'
+description: 'Trigger APIsec scan'
 inputs:
   apisec-username:
     description: 'The APIsec username with which the scans will be executed'
