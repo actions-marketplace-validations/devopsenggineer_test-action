@@ -1,4 +1,5 @@
-name: 'Hello World78601'
+# name: 'Hello World78601'
+name: 'Hello-World78601'
 description: 'Greet someone'
 inputs:
 #   GREET: 
